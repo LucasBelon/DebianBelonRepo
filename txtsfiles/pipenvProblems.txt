@@ -1,0 +1,8 @@
+When I installed the pipenv with pip3 it said that the binaries
+weren't on PATH, so, in order to put them, on the raspberry pi 
+machine, i've run the following command:
+$ echo "export PATH=$PATH:~/.local/bin" >> ~/.bashrc
+It worked well. After it, just run 
+source ~/.bashrc
+and my pipenv worked fine
+

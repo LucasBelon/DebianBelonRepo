@@ -1,0 +1,133 @@
+<<ssh_connection
+    In order to make a simple (I mean, a really basic) ssh connection you'll need a few things:
+    a ssh client program (we'll use openssh, it was already installed on debian)
+    a ssh server program (I've installed it on bodhi linux)
+    a login and password, plus the ip adress of the server machine.
+    When doing:
+    $ ip addr
+    We can get the ip address, and with 
+    $ sudo apt-get install openssh-server
+    we can install our server. Now, on the client machine we need to do:
+    $ ssh login@ip_addr
+    It will be something like this:
+    $ ssh ruan@192.168.8.1
+    The user must be configured on the server machine before, and I'm not the best person to
+    explain how to do it, but as soon as I find out I'll gather this here.
+    To do this I'm using two virtual machines, both are on CLI mode, so they won't explode my weak
+    pc when they start things up.
+
+    How do I know if the ssh server is up?
+    $ sudo systemctl status ssh
+    How do I stop it?
+    $ sudo service ssh stop
+    How do I make it run again?
+    $ sudo service ssh start
+    How do I make it sleep until I say it to wake up?
+    $ sudo systemctl disable ssh
+    How do I say it to wake up?
+    $ sudo systemctl enable ssh
+
+    When doing the connection between pc and raspberry, the IP should be static.
+    # Configurations at /etc/dhcpcd.conf must include lines below:
+    interface wlan0
+    static ip_address=xxx.yyy.z.abc/30
+    static ip6_address=xxxx:xxxx:xxxx:xxxx::xx/xx
+    static routers=xxx.xxx.x.x
+    static domain_name_servers=xxx.xxx.x.x x.x.x.x xxxx:xxxx:xxxx:xxxx::x
+ssh_connection
+
+
+<<LoggedOut_Login
+    If you logged out you'll need to know the repo name. If you change the repo name
+    then the "remote add" gets cancelled. So, you must do
+    $ git remote remove origin
+    And then redo the connection with
+    $ git remote add origin git@github.com:<GitUserName>/<NameOfRepo>.git
+    It will work if you cloned one of yours repositories and want to control them
+    and make some push on them.
+    And if none of this works, try to follow the instructions that comes after the
+    following command:
+    $ git branch -M main
+    At last, need to test it by doing:
+    $ git push -u origin main
+    Author: Lucas Gouveia Belon, a brazilian guy.
+LoggedOut_Login
+
+
+<<How_to_un_able_GUI
+First Way: 
+    In order to activate and de-activate the GUI mode and change to the
+    CLI mode, you'll need to set it with systemctl (system control)
+    To find out what is the standard interface of your system you can use:
+    $ systemctl get-default
+    If it is "graphical.target" then your standard interface is the GUI
+    If it is "multi-user.target" then your standard interface is the CLI
+    --To change from GUI to CLI:
+    $ systemctl set-default multi-user.target
+    $ systemctl reboot
+    --To change from CLI to GUI:
+    $ systemctl set-default graphical.target
+    $ systemctl reboot
+Second Way: (it doesn't worked on Debian)
+    --To change from GUI to CLI:
+    $ sudo service lightdm stop &
+    --To change from CLI to GUI:
+    $ sudo service lightdm start &
+    [When i switched from GUI to CLI, neofetch sofware pointed that the memory usage
+    went from about 600MiB to near 180MiB, and using ps -aux the processes went from
+    180 to about 130. If it's a really good tip this one (if you know how to use it
+    without accessing a internet browser]
+How_to_un_able_GUI
+
+
+<<How_to_avoid_bash_path
+    When we're at a deep directory things can get really boring. The command line will show 
+    something like
+    user@machine:~/Projects/GitProj/scratch/.git/objects/info$ 
+    And it's really anoying, there's no room in the line. You can make things different by
+    changing some few lines on the ~/.bashrc file
+    The enviroment variable we're looking at is PS1. If you change it with some text editor to, 
+    let's say,
+    PS1="\u > "
+    It will show "<username> > ". And you'll be able to know where you are with the command
+    $ pwd 
+    What I choose to do is to open a terminal from your first terminal, then write:
+    $ export PS1="> "
+    The terminal line will become minimalist, and your normal terminal will remain unchanged.
+    In gnome you can open a terminal window by:
+    $ gnome-terminal &
+    And then running the export. The .bashrc file is read everytime we open the terminal, so
+    don't try to do those stuff on a real terminal. It can mess with your pc. Do it 
+    only on pseudo-terminals.
+    You can open a "new" terminal inside your terminal by writing 
+    $ bash
+    Then you can use the $ export PS1="> "
+    and then exit. It will take you back to the normal terminal, without any changes.
+How_to_avoid_bash_path
+
+
+<<internet_lookup
+    When we're using the CLI only it's useful to be able to access the internet, 
+    $ sudo apt-get install links
+    It works really well, and is very pretty
+
+    When we want to learn about internet stuff we need the tools for it
+    $ sudo apt-get install net-tools
+    We need to know the doors in our house, so...
+    $ sudo ifconfig
+    will show some info of those doors.
+    To shut down our doors we can use:
+    $ sudo ifconfig enp0s3 down
+    and to reverse
+    $ sudo ifconfig enp0s3 up
+    What about to change the IP?
+    $ sudo ifconfig enp0s3 10.0.2.10 netmask 255.255.255.0
+    What are the routes that our machine has?
+    $ sudo route
+
+    What about checking our doors? More tools, this time a port scan
+    $ sudo apt-get install nmap
+    it must be used with the IP that we want to scan
+    $ sudo nmap 127.0.0.1
+internet_lookup
+

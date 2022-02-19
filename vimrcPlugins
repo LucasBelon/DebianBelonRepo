@@ -1,0 +1,28 @@
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+
+call vundle#begin()
+
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" PS: LSP = Language Server Protocol
+
+" Makes the settings of LSP easier (a lot, really)
+Plugin 'mattn/vim-lsp-settings'
+
+" The plugin that will handle the LSP.
+Plugin 'prabirshrestha/vim-lsp'
+
+" Async complete, the plugin 
+Plugin 'prabirshrestha/asyncomplete.vim'
+
+" The plugin that will work with the LSP
+Plugin 'prabirshrestha/asyncomplete-lsp.vim'
+
+
+call vundle#end()
+
+" TO MAKE THIS RUN (with vundle installed) 
+" DO THE COMMAND :PluginInstall 

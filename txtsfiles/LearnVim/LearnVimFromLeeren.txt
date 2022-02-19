@@ -1,0 +1,103 @@
+# This file is to make some anotations about what leeren says and shows about turnin VIM a lighweight IDE.
+# The URL for the video is:
+# https://www.youtube.com/watch?v=Gs1VDYnS-Ac
+# Ps: This guy is a legend. Lets go
+
+7 steps to turn vim into a IDE
+(For big projects with a lot of files, and so much modules, like a big java project, it won't work)
+
+STEP 1: MAKE A MINIMAL VIMRC
+"Whichever of the following is first found first will be used:
+
+$VIMINIT    (this is an environmental variable)
+$HOME/.vimrc
+$HOME/.vim/vimrc
+$EXINIT     (this is an environmental variable)
+$HOME/.exrc
+$VIMRUNTIME/defaults.vim
+
+He deletes all of his configurations, and then, to make shure that even the default vimrc is loaded
+he opens up his python file with:
+vi -Nu NORC <file>
+The firts thing is to detect the filetype
+to see if there's any filetype detected he goes with
+:set filetype?
+Then he set the filetype, the syntax and fx up the backspace
+
+Now he creates the /.vim directory
+Where to put our vimrc configurations? 
+We got this options and...
+
+$VIMINIT    (this is an environmental variable)
+$HOME/.vimrc
+$HOME/.vim/vimrc <----This one is portable, we can throw it there and tada
+$EXINIT     (this is an environmental variable)
+$HOME/.exrc
+$VIMRUNTIME/defaults.vim
+
+Now he creates the vimrc file for good, inside the .vim directory (not a .vimrc file, a vimrc file, without a dot)
+
+The also set the runtime directory and the $RC (for vimrc) directory
+
+STEP 2: FIX FORMATTING
+Python example (following PEP8 standards)
+ *  4 spaces per indentation
+ *  Limit Lines to a maximum of 79 characters
+Where do I put the filetype configurations?
+
+RuntimePath should be consulted:
+
+compiler/
+ftdetect/
+filetype.vim
+scripts.vim
+autoload/
+ftplugin/
+plugin/
+pack/
+colors/
+doc/
+import/
+keymap/
+lang/
+menu.vim
+print/
+spell/
+tutor
+indent/
+
+He does mkdir ~/.vim/after/ftplugin/python.vim
+after/ is a good place to put extra things so you don't overwrite the current config file
+
+STEP 3: FIX YOUR PATH
+Make sure your current directory (:pwd) is you project root.
+Figure out what parts of the project will be frequently explored.
+add those to your :path
+
+for browsing outside your main project context, make use of :lcd
+and :setlocal path
+
+:set path=.,**      
+" It makes the path as the directory of the file and all the ones that comes below
+
+STEP 4: SETUP INCLUDE SEARCH
+include-search is very powerful, and defines commands and patterns
+that allow for instantly locating simbol definitions (like functions,
+variables and macros)
+Try playing around with settin the two pattern options:
+ *  include: Used do define which files should be traveled for 
+    searching of relevant simbols
+ *  define: find macro definitions (works in tandem with includes) 
+
+He uses :ij <pattern> to jump beetween files
+after copying all this stuff surely should study regex
+remember to copy this .vim dir
+Now he's using :dj
+
+STEP 5: SETUP TAGS
+When include-search fails, tags are the best fallback
+option to use. all it requires is creating a tags file
+for your project and keeping sync after making changes.
+
+There's other steps, but they're useless to me
+

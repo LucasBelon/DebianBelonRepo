@@ -1,0 +1,3 @@
+I'm spending some time to find out how to add the python files so
+they appears on omnicompletion.
+

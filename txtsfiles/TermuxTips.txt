@@ -1,0 +1,32 @@
+This is a simple log file for what I did on this terminal emulator to get track and 
+get able to reproduce it anywhere else.
+
+-Installed vim and downloaded my vimrc file
+    -The commands are:
+        -$ pkg install vim
+        -$ pkg install git
+        -$ git clone https://github.com/LucasBelon/DebianBelonRepo
+    -Then created the /.vim/ folder with undodir and backup as subdirectories
+        -$ mkdir -p ~/.vim/undodir ~/.vim/backup
+        -$ cp ~/DebianBelonRepo/vimrc ~/.vim/vimrc
+
+-Added the Storage permissions to the app, so we can access the internal storage
+    -Created a symlink to be able to access it as if it was a directory inside the ~/
+     directory
+    -Commands:
+        -$ ln -s /storage/emulated/0 ~/storage
+    -Now we're able to use things like images and any other file from our device
+
+-Installed locate to be able to find files easily
+    -$ pkg install locate && updatedb
+
+-Installed apache2 and some settings
+    -Downloaded apache2 and started it (it gives us a error message, but do not fear)
+        -$ pkg install apache2
+        -$ apachectl
+    -Added a symlink to be able to access the apache2 file that is responsible for the index.html
+     that runs our localhost:8080
+        -$ ln -s ~/../usr/share/apache2/default-site/htdocs/ apache_htdocs
+
+ -Installed gh on this device following the step-by-step script
+    -Now I can continue studying C lang on a new, smaller device. Amazing

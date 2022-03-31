@@ -159,13 +159,13 @@ Setting an editor:
 $ gh config set editor vim
 GitHubDownloadAndInstall
 
-curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/githubcli-archive-keyring.gpg ;
-curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/githubcli-archive-keyring.gpg ;
+# curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/githubcli-archive-keyring.gpg ;
+# curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/githubcli-archive-keyring.gpg ;
 
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null ;
 
-sudo apt update ;
-sudo apt install gh ;
+# sudo apt update ;
+apt install gh ;
 gh config set editor vim ;
 
 <<SSHkeys
@@ -208,7 +208,7 @@ SSHkeys
 ssh-keygen -t ed25519 -C "lucasgouveiabelon@gmail.com" ;
 eval "$(ssh-agent -s)" ;
 ssh-add ~/.ssh/id_ed25519 ;
-gh ssh-key add ~/.ssh/id_ed25519.pub --title "GalaxyOn7";
+gh ssh-key add ~/.ssh/id_ed25519.pub --title "TERMUX";
 gh auth login ;
 
 <<CreateOnCLI

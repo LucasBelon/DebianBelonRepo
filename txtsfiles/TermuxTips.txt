@@ -31,3 +31,8 @@ get able to reproduce it anywhere else.
 
  -Installed gh on this device following the step-by-step script
     -Now I can continue studying C lang on a new, smaller device. Amazing
+
+-Learned how to go online from localhost
+    -With open ssh and apache2, with apache running we need to
+    access "localhost.run" and establish a ssh tunneling from
+    your machine to the world. It's kind of magical

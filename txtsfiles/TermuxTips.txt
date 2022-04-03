@@ -11,6 +11,7 @@ get able to reproduce it anywhere else.
         -$ cp ~/DebianBelonRepo/vimrc ~/.vim/vimrc
 
 -Added the Storage permissions to the app, so we can access the internal storage
+    -$ termux-setup-storage
     -Created a symlink to be able to access it as if it was a directory inside the ~/
      directory
     -Commands:

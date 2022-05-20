@@ -130,7 +130,7 @@ and we want our instalation to be minimal as possible in this sense. python3-dev
 almost the same, but it's a requirement to some other programs.
 Note_about_python
 
-#sudo apt-get install python3-dev -y;
+sudo apt-get install python3-dev -y;
 #sudo apt-get install python3 -y ;
 
 #sudo apt-get install python3.x -y ; 
@@ -138,7 +138,9 @@ Note_about_python
 # -> the most recent python version by today (nov,2021) <- 
 # $ sudo apt-get install python3.10 -y;
 
-#sudo apt-get install python3-pip -y;
+sudo apt-get install python3-venv -y;
+
+sudo apt-get install python3-pip -y;
 # pip - A tool for download and install other useful tools
 <<Note_about_pip
 Pip stands for preferred installer program. I rather remember it as
@@ -153,7 +155,7 @@ if we want to. And its a devops practice to make sure that it's on our
 someone else he will be able to install all dependencies with pipenv install
 Note_about_pip
 
-#sudo pip3 install pipenv ;
+sudo pip3 install pipenv ;
 
 # pipenv - A way to clusterize your applications. 
 # It's maybe the most common tool for this purpose on python.
@@ -173,7 +175,7 @@ It show's a nice screen with the system informations, and the way we'll use it, 
 show a nice logo everytime we start the terminal.
 Informations_neofetch
 
-#sudo apt-get install neofetch -y ;
+sudo apt-get install neofetch -y ;
 
 <<do_it_once 
 If you're going to work with git and wants to use vim as editor
@@ -199,7 +201,7 @@ it will be easier to remove in further time.
 And by it's side we'll install cmake, a dependencie from a vim plugin
 deb_packages
 
-#sudo apt install build-essential -y ;
+sudo apt install build-essential -y ;
 
 <<InternetBrowser
 In my opinion, opera is the best browser to be used on worse machines. 
@@ -236,7 +238,7 @@ that we see in the site. The lines below are up to install stable version.
 You should check on the official site if those lines are still valid.
 SublimeText_with_wget
 
-#sudo apt install wget -y;
+sudo apt install wget -y;
 
 #wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add - ;
 

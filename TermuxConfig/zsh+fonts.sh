@@ -1,4 +1,5 @@
 #! /bin/bash
+termux-change-repo ;
 
 pkg install zsh ;
 
@@ -20,6 +21,11 @@ mv "Hack Regular Nerd Font Complete.ttf" font.ttf ;
 rm -rf fonts
 
 echo alias ls=lsd >> /data/data/com.termux/files/usr/etc/zshrc ;
+
 echo alias ls=lsd >> /data/data/com.termux/files/usr/etc/bash.bashrc ;
+
+echo 'export PATH=/data/data/com.termux/files/home/.local/bin:$PATH' >> /data/data/com.termux/files/usr/etc/zshrc ;
+ 
+echo 'export PATH=/data/data/com.termux/files/home/.local/bin:$PATH' >> /data/data/com.termux/files/usr/etc/bash.bashrc ;
 
 termux-reload-settings ;

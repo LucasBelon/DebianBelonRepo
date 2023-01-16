@@ -28,4 +28,6 @@ echo 'export PATH=/data/data/com.termux/files/home/.local/bin:$PATH' >> /data/da
  
 echo 'export PATH=/data/data/com.termux/files/home/.local/bin:$PATH' >> /data/data/com.termux/files/usr/etc/bash.bashrc ;
 
+bash < (curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh) ;
+
 termux-reload-settings ;

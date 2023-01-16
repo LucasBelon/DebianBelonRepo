@@ -1,4 +1,4 @@
-# Espera-se que tenha o git instalado
+pkg install zsh ;
 
 pkg install lsd ;
 
@@ -18,3 +18,5 @@ mv "Hack Regular Nerd Font Complete.ttf" font.ttf ;
 rm -rf fonts
 
 echo alias ls=lsd >> /data/data/com.termux/files/usr/etc/zshrc
+echo alias ls=lsd >> /data/data/com.termux/files/usr/etc/bash.bashrx
+

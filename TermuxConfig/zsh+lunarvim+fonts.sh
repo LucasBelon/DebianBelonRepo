@@ -1,13 +1,9 @@
 #! /bin/bash
 termux-change-repo ;
 
-pkg install zsh ;
+pkg install zsh lsd curl openssh;
 
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-
-pkg install lsd ;
-
-pkg install curl ;
 
 cd ~/.termux ;
 curl -fLo font.zip https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Hack.zip ;
@@ -31,3 +27,5 @@ echo 'export PATH=/data/data/com.termux/files/home/.local/bin:$PATH' >> /data/da
 bash < (curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh) ;
 
 termux-reload-settings ;
+
+

@@ -111,7 +111,7 @@ nnoremap \l :tablast<CR>
 " MACROS:
 
 " This macro turn the change of the relative number easier
-let @R=':set relativenumber!'
+let @R=':set relativenumber!k'
 " Pre-sets the @i macro to be a cool window, with a terminal at the bottom and
 " a file tree at the left corner
 let @I=':botright terminal:topleft vertical split:Explore:vertical resize 20:resize 30:mksession! Session.vim'
@@ -120,7 +120,7 @@ let @O=':belowright vertical terminalPS1="> "h'
 " Pre-sets the @h macro to be a html file initializer
 let @H='i<!DOCTYPE html><html lang="pt-br"><head><title>TITLE</title><meta charset="utf-8"></head><body>BODY</body></html>gg'
 " Pre-sets the @c macro to be a simple C program initializer
-let @C = 'i/* */# include <stdio.h>main(){}ki	'
+let @C = 'i/* */# include <stdio.h># include <stdlib.h>int main(void){return 0;}ki	'
 " Pre-sets the @h macro to be a html file initializer
 " colorscheme koehler " a builtin colorscheme
  

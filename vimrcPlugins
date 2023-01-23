@@ -15,6 +15,12 @@ Plugin 'mattn/vim-lsp-settings'
 " The plugin that will handle the LSP.
 Plugin 'prabirshrestha/vim-lsp'
 
+" Enabling fold by LSP
+set foldmethod=expr
+  \ foldexpr=lsp#ui#vim#folding#foldexpr()
+  \ foldtext=lsp#ui#vim#folding#foldtext()
+
+
 " Async complete, the plugin 
 Plugin 'prabirshrestha/asyncomplete.vim'
 

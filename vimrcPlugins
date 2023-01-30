@@ -32,8 +32,11 @@ inoremap <expr> <cr>    pumvisible() ? asyncomplete#close_popup() : "\<cr>"
 " The plugin that will work with the LSP
 Plugin 'prabirshrestha/asyncomplete-lsp.vim'
 
+" Snippets that work with lsp
 Plugin 'hrsh7th/vim-vsnip'
 Plugin 'hrsh7th/vim-vsnip-integ'
+" Snippets that are just usefull
+Plugin 'rafamadriz/friendly-snippets'
 
 
 " SETTINGS TO SNIPPETS
@@ -60,8 +63,8 @@ xmap        s   <Plug>(vsnip-select-text)
 nmap        S   <Plug>(vsnip-cut-text)
 xmap        S   <Plug>(vsnip-cut-text)
 
+" Plugin to write good latex pdf files
+Plugin 'lervag/vimtex'
 
 call vundle#end()
 
-" TO MAKE THIS RUN (with vundle installed) 
-" DO THE COMMAND :PluginInstall 

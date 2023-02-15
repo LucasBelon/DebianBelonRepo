@@ -120,8 +120,9 @@ let @O=':belowright vertical terminalPS1="> "h'
 " Pre-sets the @h macro to be a html file initializer
 let @H='i<!DOCTYPE html><html lang="pt-br"><head><title>TITLE</title><meta charset="utf-8"></head><body>BODY</body></html>gg'
 " Pre-sets the @c macro to be a simple C program initializer
-let @C = 'i/* */# include <stdio.h># include <stdlib.h>int main(void){return 0;}ki	'
-" Pre-sets the @h macro to be a html file initializer
+let @C = 'i/* */# include <stdio.h># include <stdlib.h>int main(void){return 0;}k$i'
+let @A = ':belowright vertical split:bn:botright split:bn:belowright vertical split:bn:tabnew %:bn'
+
 " colorscheme koehler " a builtin colorscheme
  
 " Other options: (I did :colorscheme then Ctrl+D)

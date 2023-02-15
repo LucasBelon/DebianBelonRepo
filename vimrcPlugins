@@ -71,7 +71,7 @@ nmap        S   <Plug>(vsnip-cut-text)
 xmap        S   <Plug>(vsnip-cut-text)
 
 " Plugin to write good latex pdf files
-Plugin 'lervag/vimtex'
+"Plugin 'lervag/vimtex'
 
 call vundle#end()
 

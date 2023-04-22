@@ -123,7 +123,8 @@ let @H='i<!DOCTYPE html><html lang="pt-br"><head><title>TITLE</title><meta c
 let @C = 'i/* */# include <stdio.h># include <stdlib.h>int main(void){return 0;}k$i'
 let @A = ':belowright vertical split:bn:botright split:bn:belowright vertical split:bn:tabnew %:bn'
 
-" colorscheme koehler " a builtin colorscheme
+colorscheme desert " a builtin colorscheme
+
  
 " Other options: (I did :colorscheme then Ctrl+D)
 "blue       desert     koehler    peachpuff  torte

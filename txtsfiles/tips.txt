@@ -51,6 +51,8 @@ ssh_connection
     At last, need to test it by doing:
     $ git push -u origin main
     Author: Lucas Gouveia Belon, a brazilian guy.
+    A easier way:
+    $ git remote remove origin && git remote add origin git@github.com:YourName/YourRepo.git && git branch -M main && git push -u origin main
 LoggedOut_Login
 
 

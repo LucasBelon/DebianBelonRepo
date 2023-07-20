@@ -35,6 +35,10 @@ set ignorecase      " Will ignore case sensitive on searches
 set smartcase       " Will help to ignore case sensitive
 "set cursorline		" Highlight current line
 "set cursorcolumn	" Highlight current column
+set ruler           " Sets more info about the file.
+set laststatus=2    " Sets a permanent info line at the bottom of the screen.
+highlight colorcolumn ctermfg=cyan ctermbg=darkgray
+" Sets the color of colorcolumn
 
 set showmatch		" Highlight matching ([{ }])
 set hlsearch		" Highlight matches

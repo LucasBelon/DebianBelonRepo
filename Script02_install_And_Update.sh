@@ -117,10 +117,10 @@ password
 
 # the following commands should update and upgrade the general system
 
-sudo apt-get update --fix-missing -y;
-sudo apt-get upgrade -y;
-sudo apt-get autoclean -y;
-sudo apt-get autoremove -y;
+sudo apt update --fix-missing -y;
+sudo apt upgrade -y;
+sudo apt autoclean -y;
+sudo apt autoremove -y;
 
 <<Note_about_python
 The following commands should install the latest available version of python and
@@ -130,17 +130,20 @@ and we want our instalation to be minimal as possible in this sense. python3-dev
 almost the same, but it's a requirement to some other programs.
 Note_about_python
 
-sudo apt-get install python3-dev -y;
-#sudo apt-get install python3 -y ;
+#sudo apt install python3-dev -y;
+sudo apt install python3 \
+    python3-venv\
+    python3-pip -y;
 
-#sudo apt-get install python3.x -y ; 
+#sudo apt install python3.x -y ; 
 
 # -> the most recent python version by today (nov,2021) <- 
-# $ sudo apt-get install python3.10 -y;
+# $ sudo apt install python3.10 -y;
 
-sudo apt-get install python3-venv -y;
+#sudo apt install python3-venv -y;
 
-sudo apt-get install python3-pip -y;
+#sudo apt install python3-pip -y;
+
 # pip - A tool for download and install other useful tools
 <<Note_about_pip
 Pip stands for preferred installer program. I rather remember it as
@@ -175,7 +178,7 @@ It show's a nice screen with the system informations, and the way we'll use it, 
 show a nice logo everytime we start the terminal.
 Informations_neofetch
 
-sudo apt-get install neofetch -y ;
+sudo apt install neofetch -y ;
 
 <<do_it_once 
 If you're going to work with git and wants to use vim as editor
@@ -238,16 +241,15 @@ that we see in the site. The lines below are up to install stable version.
 You should check on the official site if those lines are still valid.
 SublimeText_with_wget
 
-sudo apt install wget -y;
-
+sudo apt install wget curl -y;
 #wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add - ;
 
 # In debian 11, apt-key is deprecated, but for now it's working. You should get to know
 # what's the tool that will replace it.
 
-#sudo apt-get install apt-transport-https -y;
+#sudo apt install apt-transport-https -y;
 #echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list ;
-#sudo apt-get install sublime-text -y ;
+#sudo apt install sublime-text -y ;
 
 # The Sublime-Text is installed over the alias "subl". To make it run in the background do 
 # $ subl &
@@ -258,7 +260,7 @@ Vim is a good editor, and I'll let you choose two versions. One with the plugins
 with another .sh file, so don't worry for now.
 Vim_is_powerful
 
-sudo apt-get install vim -y ;
+sudo apt install vim -y ;
 
 mkdir -p ~/.vim/autoload ; # I'm not sure what is this for
 mkdir -p ~/.vim/backup ; # our backup files will end up here
@@ -269,11 +271,9 @@ mkdir -p ~/.vim/after/ftplugin ; # Our typefiles configs will be here
 
 cp ~/DebianBelonRepo/vimrc  ~/.vim/ ; # Copy vimrc to ~/.vim/
 
-sudo apt-get update -y;
-sudo apt-get upgrade -y;
-sudo apt-get autoclean -y;
-sudo apt-get autoremove -y;
-sudo apt update -y ;
-sudo apt upgrade -y ;
+sudo apt update -y;
+sudo apt upgrade -y;
+sudo apt autoclean -y;
+sudo apt autoremove -y;
 
 echo "end of the script"

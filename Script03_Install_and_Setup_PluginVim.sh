@@ -1,3 +1,8 @@
+#! /bin/bash
+#
+# Adiciona arquivos de configuração de plugins
+# ao vim da máquina.
+#
 cat ./vimrcPlugins >> ~/.vim/vimrc ;
 
 sudo apt install vim-nox -y; # It's a Vundle Requirement

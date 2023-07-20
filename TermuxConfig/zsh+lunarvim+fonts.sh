@@ -8,7 +8,7 @@ sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/to
 cd ~/.termux ;
 curl -fLo font.zip https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Hack.zip ;
 mkdir fonts ;
-mv font.zip fonts ;
+mv font.zip fonts/ ;
 cd fonts ;
 unzip font.zip ;
 mv "Hack Regular Nerd Font Complete.ttf" .. ;

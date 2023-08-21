@@ -180,6 +180,14 @@ Informations_neofetch
 
 sudo apt install neofetch -y ;
 
+<<SystemManagement
+Btop is a very nice tool to have on the hand. It's lightweight, works in tty mode,
+and is very visual. If it's in the distro repositories, I'll want to install it.
+SystemManagement
+
+sudo apt install btop -y;
+
+
 <<do_it_once 
 If you're going to work with git and wants to use vim as editor
 for your commits, you can add vim as your editor in the environment variables

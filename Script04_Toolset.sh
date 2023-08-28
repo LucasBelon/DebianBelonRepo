@@ -31,5 +31,4 @@ sudo apt install -y timeshift;
 # NumLock desligado na inicialização:
 sudo apt install numlockx
 # Esse passo precisa ser manual (por enquanto)
-# sudo su ; # Para virar root.
-# echo "/usr/bin/numlockx on" >> /etc/X11/xinit/xinitrc; Para adicionar uma linha no inicializador da interface gráfica.
+# Ir para opção no menu "login window", em settings, acionar o numlock no login

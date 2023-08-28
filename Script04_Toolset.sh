@@ -27,3 +27,9 @@ sudo apt install -y \
 
 # Software de backup, útil se sistema de arquivos for o timeshift.
 sudo apt install -y timeshift;
+
+# NumLock desligado na inicialização:
+sudo apt install numlockx
+# Esse passo precisa ser manual (por enquanto)
+# sudo su ; # Para virar root.
+# echo "/usr/bin/numlockx on" >> /etc/X11/xinit/xinitrc; Para adicionar uma linha no inicializador da interface gráfica.

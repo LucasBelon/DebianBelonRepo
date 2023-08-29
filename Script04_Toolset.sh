@@ -28,6 +28,8 @@ sudo apt install -y \
 # Software de backup, útil se sistema de arquivos for o timeshift.
 sudo apt install -y timeshift;
 
+# Software de atualização alternativo:
+sudo apt install nala -y;
 # NumLock desligado na inicialização:
 sudo apt install numlockx
 # Esse passo precisa ser manual (por enquanto)

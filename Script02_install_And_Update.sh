@@ -45,22 +45,6 @@ THIS WHOLE DIRECTORY MUST BE ON ~/ SO VIM GETS SET UP CORRECTLY
 
 echo "IF YOU RAN THIS SCRIPT IN ROOT MODE PRESS CTRL+C IMMEDIATLY" ;
 
-echo "8" ;
-sleep 1 ;
-echo "7" ;
-sleep 1 ;
-echo "6" ;
-sleep 1 ;
-echo "5" ;
-sleep 1 ;
-echo "4" ;
-sleep 1 ;
-echo "3" ;
-sleep 1 ;
-echo "2" ;
-sleep 1 ;
-echo "1" ;
-sleep 1 ;
 
 <<Initial_considerations
 This script is meant to run once. Since it's a script to set things up there will be some
@@ -131,9 +115,9 @@ almost the same, but it's a requirement to some other programs.
 Note_about_python
 
 #sudo apt install python3-dev -y;
-sudo apt install python3 \
-    python3-venv\
-    python3-pip -y;
+#sudo apt install python3 \
+#    python3-venv\
+#    python3-pip -y;
 
 #sudo apt install python3.x -y ; 
 
@@ -158,7 +142,7 @@ if we want to. And its a devops practice to make sure that it's on our
 someone else he will be able to install all dependencies with pipenv install
 Note_about_pip
 
-sudo pip3 install pipenv ;
+#sudo pip3 install pipenv ;
 
 # pipenv - A way to clusterize your applications. 
 # It's maybe the most common tool for this purpose on python.

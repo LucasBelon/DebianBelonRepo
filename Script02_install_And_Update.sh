@@ -263,6 +263,10 @@ mkdir -p ~/.vim/after/ftplugin ; # Our typefiles configs will be here
 
 cp ~/DebianBelonRepo/vimrc  ~/.vim/ ; # Copy vimrc to ~/.vim/
 
+# Correção de configurações de data e hora para dual boot (linux mint).
+timedatectl set-local-rtc 1;
+
+# Atualização final, autoclean e autoremove
 sudo apt update -y;
 sudo apt upgrade -y;
 sudo apt autoclean -y;

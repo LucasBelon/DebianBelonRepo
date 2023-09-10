@@ -481,3 +481,23 @@ You can remove all abbr's
 NEXT STEP: VIMSCRIPT?
 -----------------------
 
+-----------------------------------
+Como usar o scroll do terminal!!!
+-----------------------------------
+<C-w> N  : Desativa o terminal e transforma em texto.
+
+
+-----------------------------------
+Onde estão as opcões "set" que vai no vimscript
+-----------------------------------
+:help set
+Depois pular pro glossário e ver quais opções estão disponíveis
+
+
+-----------------------------------
+Como usar o quickfix (para se mover entre arquivos)
+-----------------------------------
+Entrar em um projeto, usar o :grep nome_da_funcão ./*.cpp
+para pesquisar o nome de uma função em todos os arquivos da
+pasta atual que terminem com ".cpp".
+Então usar o :copen. 

@@ -118,6 +118,7 @@ let maplocalleader = ","
 let g:tex_conceal = ""
 
 Plugin 'mateusbraga/vim-spell-pt-br'
+set spelllang=pt-br
 
 call vundle#end()
 

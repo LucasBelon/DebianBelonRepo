@@ -28,9 +28,12 @@ sudo apt install -y \
 # Software de backup, útil se sistema de arquivos for o timeshift.
 sudo apt install -y timeshift;
 
-# Software de atualização alternativo:
-sudo apt install nala -y;
 # NumLock desligado na inicialização:
-sudo apt install numlockx
+#sudo apt install numlockx
 # Esse passo precisa ser manual (por enquanto)
 # Ir para opção no menu "login window", em settings, acionar o numlock no login
+
+# Procurar o Oh My Bash e usar o tema
+# OSH_THEME="nwinkler"
+
+# Baixar o opera beta e ver se funciona a netflix

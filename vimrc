@@ -12,6 +12,7 @@
 " This file is a bunch of pieces tied together
 
 let $RTP=split(&runtimepath, ',')[0]
+" Force the rc path to my vimrc
 let $RC="$HOME/.vim/vimrc"
 
 syntax on           " Enable syntax processing
@@ -27,6 +28,21 @@ if has('mouse')
     set mouse=a     " Enable mouse if available
 endif
 
+if has('clipboard')
+    if has('unnamedplus')  " When possible use + register for copy-paste
+        set clipboard=unnamed,unnamedplus
+    else         " On mac and Windows, use * register for copy-paste
+        set clipboard=unnamed
+    endif
+endif
+
+set laststatus=2    " Sets a permanent info line at the bottom of the screen.
+set statusline=%<%f\                     " Filename
+set statusline+=%w%h%m%r                 " Options
+set statusline+=\ [%{&ff}/%Y]            " Filetype
+set statusline+=\ [%{getcwd()}]          " Current dir
+set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
+
 set backspace=start,eol,indent " If the backspace key doesn't work it will fix it
 set hidden          " Enables switching buffers without saving then 
 set number          " Show line numbers
@@ -36,7 +52,6 @@ set smartcase       " Will help to ignore case sensitive
 "set cursorline		" Highlight current line
 "set cursorcolumn	" Highlight current column
 set ruler           " Sets more info about the file.
-set laststatus=2    " Sets a permanent info line at the bottom of the screen.
 highlight colorcolumn ctermfg=cyan ctermbg=darkgray
 " Sets the color of colorcolumn
 

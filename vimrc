@@ -88,9 +88,20 @@ set undodir=~/.vim/undodir  " We'll use undodir
 set undofile		" There will be a undofile in our undodir
 set wildmenu        " Enable auto completion menu after pressing TAB.
 
+"FORÇAR MKSESSION A SALVAR EM CAMINHO RELATIVO
+function! MakeSession()
+    exe "mksession! .vim"
+    exe "tabedit! .vim"
+    exe "silent g:^cd :d"
+    exe "x"
+endfunction
+nnoremap <leader>mks :call MakeSession()<cr>
+
+" FOLD MAP
 nnoremap <space> za 
 " Space open/closes folds
 
+" NOHIGHLIGH MAP
 nnoremap <leader><space> :nohlsearch<CR>	
 " Turns '<\ + space>' a command to turn off the 
 " syntax highlighting from previous search
@@ -142,7 +153,7 @@ let @H='i<!DOCTYPE html><html lang="pt-br"><head><title>TITLE</title><meta c
 let @C = 'i/* */# include <stdio.h># include <stdlib.h>int main(void){return 0;}k$i'
 let @A = ':belowright vertical split:bn:botright split:bn:belowright vertical split:bn:tabnew %:bn'
 
-colorscheme desert " a builtin colorscheme
+colorscheme koehler " a builtin colorscheme
 
  
 " Other options: (I did :colorscheme then Ctrl+D)

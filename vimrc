@@ -89,12 +89,17 @@ set undofile		" There will be a undofile in our undodir
 set wildmenu        " Enable auto completion menu after pressing TAB.
 
 "FORÇAR MKSESSION A SALVAR EM CAMINHO RELATIVO
-function! MakeSession()
-    exe "mksession! .vim"
-    exe "tabedit! .vim"
+function! MakeSession() 
+    let cwd = getcwd()
+    let filename = cwd . '/.vim'
+    exe "mksession! " . filename
+    exe "tabedit! " . filename
     exe "silent g:^cd :d"
+    exe "silent g:^lcd :d"
+    exe "silent %s?\\v \\~=/.+/? ?g"
     exe "x"
 endfunction
+
 nnoremap <leader>mks :call MakeSession()<cr>
 
 " FOLD MAP

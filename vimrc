@@ -113,3 +113,58 @@ endfunction
 
 nnoremap <leader>mks :call MakeSession()<cr>
 
+" KEY BINDINGS
+nnoremap <space> za 
+" Space open/closes folds
+
+nnoremap <leader><space> :nohlsearch<CR>	
+" Turns '<\ + space>' a command to turn off the 
+" syntax highlighting from previous search
+
+
+"  SPLITTED WINDOWS MOVE SIMPLIFICATION
+nnoremap .. :vertical resize -1<CR>
+" Turns ,, and .. in vertical resize keys
+nnoremap ,, :vertical resize +1<CR>
+
+nnoremap ;; :resize +1<CR>
+" Turns \\ and ;; into resize keys
+nnoremap \\ :resize -1<CR>
+
+" TABS BINDINGS ########
+
+" \c stands for create tab
+" (with no new Blank buffers)
+nnoremap \c :tabnew %<CR>
+" \x stands for exchange
+nnoremap \x :tabnext<CR>
+" \s is close to 
+nnoremap \s :tabprevious<CR>
+" \z stands for tab zipped
+nnoremap \z :tabclose<CR>
+" Move the tab to the right
+nnoremap \. :tabmove +1<CR>
+" \< is to move the tab to the left
+nnoremap \, :tabmove -1<CR>
+" \f stands for first tab
+nnoremap \f :tabfirst<CR>
+" \l stands for last tab
+nnoremap \l :tablast<CR>
+
+" ------------------------------------------------------------------------------------
+
+" MACROS:
+
+" This macro turn the change of the relative number easier
+let @R=':set relativenumber!'
+" Pre-sets the @i macro to be a cool window, with a terminal at the bottom and
+" a file tree at the left corner
+let @I=':botright terminal:topleft vertical split:Explore:vertical resize 20:resize 30:mksession! Session.vim'
+" This macro is for opening a terminal to run some fast applications
+let @O=':belowright vertical terminalPS1="> "h'
+" Pre-sets the @h macro to be a html file initializer
+let @H='i<!DOCTYPE html><html lang="pt-br"><head><title>TITLE</title><meta charset="utf-8"></head><body>BODY</body></html>gg'
+" Pre-sets the @c macro to be a simple C program initializer
+let @C = 'i/* */# include <stdio.h># include <stdlib.h>int main(void){return 0;}k$i'
+let @E = ':aboveleft vertical split:Explore:vertical resize 25l'
+

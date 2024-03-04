@@ -37,3 +37,10 @@ sudo apt install -y timeshift;
 # OSH_THEME="nwinkler"
 
 # Baixar o opera beta e ver se funciona a netflix
+
+# Problemas com dpkg linux firmware, image-generic e assim em diante:
+# sudo rm -rf /var/lib/dpkg/info/*.*
+# sudo apt-get clean
+# sudo apt-get install -f
+# sudo apt-get update
+

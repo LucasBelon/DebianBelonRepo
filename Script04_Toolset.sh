@@ -18,9 +18,10 @@ sudo apt install -y \
 
 # Software para criar pdf em matemática:
 sudo apt install -y \
-    texlive \
-    texmaker \
-    pdflatex;
+    texlive-full \
+    texlive-lang-portuguese \
+    zathura \
+    texmaker ;
 
 # AndroidStudio e VSCode precisam ser baixados pela internet.
 # Não vale a pena colocar em linha de comando.
@@ -43,4 +44,5 @@ sudo apt install -y timeshift;
 # sudo apt-get clean
 # sudo apt-get install -f
 # sudo apt-get update
+# Testei. Não funciona
 

@@ -80,12 +80,12 @@ set backupdir=~/.vim/backup " Enables a standard directory to swp files
 set undodir=~/.vim/undodir  " We'll use undodir
 set undofile		" There will be a undofile in our undodir
 
-set path+=** " Adds all subdirectories 
+set path+=** " Adds all subdirectories
 set omnifunc=syntaxcomplete#Complete " Enable OmniComplete to all files
 
 "set cursorline		" Highlight current line
 "set cursorcolumn	" Highlight current column
-"set ruler           " Sets more info about the file.
+"set ruler		" Sets more info about the file.
 highlight colorcolumn ctermfg=cyan ctermbg=darkgray
 "set colorcolumn=40
 " Sets the color of colorcolumn
@@ -99,7 +99,7 @@ colorscheme koehler " a builtin colorscheme
 "delek      industry   pablo      slate
 
 
-"FORÇAR MKSESSION A SALVAR EM CAMINHO RELATIVO
+"FORCAR MKSESSION A SALVAR EM CAMINHO RELATIVO
 function! MakeSession() 
     let cwd = getcwd()
     let filename = cwd . '/.vim'
@@ -138,7 +138,7 @@ nnoremap \\ :resize -1<CR>
 nnoremap \c :tabnew %<CR>
 " \x stands for exchange
 nnoremap \x :tabnext<CR>
-" \s is close to 
+" \s is close to
 nnoremap \s :tabprevious<CR>
 " \z stands for tab zipped
 nnoremap \z :tabclose<CR>
@@ -159,7 +159,7 @@ nnoremap \l :tablast<CR>
 let @R=':set relativenumber!'
 " Pre-sets the @i macro to be a cool window, with a terminal at the bottom and
 " a file tree at the left corner
-let @I=':botright terminal:topleft vertical split:Explore:vertical resize 20:resize 30:mksession! Session.vim'
+let @I=':botright terminal:topleft vertical split:Explore:vertical resize 20:resize 30'
 " This macro is for opening a terminal to run some fast applications
 let @O=':belowright vertical terminalPS1="> "h'
 " Pre-sets the @h macro to be a html file initializer

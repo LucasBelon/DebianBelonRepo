@@ -83,6 +83,8 @@ set undofile		" There will be a undofile in our undodir
 set path+=** " Adds all subdirectories
 set omnifunc=syntaxcomplete#Complete " Enable OmniComplete to all files
 
+set spelllang=pt_br,en
+
 "set cursorline		" Highlight current line
 "set cursorcolumn	" Highlight current column
 "set ruler		" Sets more info about the file.

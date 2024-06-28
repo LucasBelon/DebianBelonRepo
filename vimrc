@@ -116,12 +116,34 @@ endfunction
 nnoremap <leader>mks :call MakeSession()<cr>
 
 " KEY BINDINGS
-nnoremap <space> za 
+"nnoremap <space> za 
 " Space open/closes folds
 
-nnoremap <leader><space> :nohlsearch<CR>	
+nnoremap <leader>e :Lexplore<CR>
+" Abre ou fecha o navegador de arquivos com \e
+
+"nnoremap <leader><space> :nohlsearch<CR>	
+nnoremap <space><space> :nohlsearch<CR>	
 " Turns '<\ + space>' a command to turn off the 
 " syntax highlighting from previous search
+
+" BufferNavigation
+nnoremap <leader>n :bNext<CR>
+nnoremap <leader>p :bprevious<CR>
+
+" BufferList Visualization
+nnoremap <leader><space> :ls<CR>
+
+
+"  SPLITTED WINDOWS GENERATE
+
+" Vertical split
+nnoremap <leader><leader> :belowright vertical split<CR>
+nnoremap <leader>\| :aboveleft vertical split<CR>
+
+" Horizontal split
+nnoremap ;; :belowright split<CR>
+nnoremap ;: :aboveleft split<CR>
 
 
 "  SPLITTED WINDOWS MOVE SIMPLIFICATION
@@ -129,29 +151,31 @@ nnoremap .. :vertical resize -1<CR>
 " Turns ,, and .. in vertical resize keys
 nnoremap ,, :vertical resize +1<CR>
 
-nnoremap ;; :resize +1<CR>
-" Turns \\ and ;; into resize keys
-nnoremap \\ :resize -1<CR>
+nnoremap <leader>u :resize +1<CR>
+" Turns \u and \d into resize keys
+nnoremap <leader>d :resize -1<CR>
+
+nnoremap <leader>b :set scrollbind!<CR>
 
 " TABS BINDINGS ########
 
 " \c stands for create tab
 " (with no new Blank buffers)
-nnoremap \c :tabnew %<CR>
+nnoremap <leader>c :tabnew %<CR>
 " \x stands for exchange
-nnoremap \x :tabnext<CR>
+nnoremap <leader>x :tabnext<CR>
 " \s is close to
-nnoremap \s :tabprevious<CR>
+nnoremap <leader>s :tabprevious<CR>
 " \z stands for tab zipped
-nnoremap \z :tabclose<CR>
+nnoremap <leader>z :tabclose<CR>
 " Move the tab to the right
-nnoremap \. :tabmove +1<CR>
+nnoremap <leader>. :tabmove +1<CR>
 " \< is to move the tab to the left
-nnoremap \, :tabmove -1<CR>
+nnoremap <leader>, :tabmove -1<CR>
 " \f stands for first tab
-nnoremap \f :tabfirst<CR>
+nnoremap <leader>f :tabfirst<CR>
 " \l stands for last tab
-nnoremap \l :tablast<CR>
+nnoremap <leader>l :tablast<CR>
 
 " ------------------------------------------------------------------------------------
 

@@ -19,6 +19,7 @@ syntax on           " Enable syntax processing
 " syntax enable     " Turn the syntax to the standard?
 
 filetype plugin indent on " Filetype detection + Filetype plugin + Filetype indent 
+set encoding=utf-8
 
 if has('mouse')
     set mouse=a     " Enable mouse if available
@@ -65,6 +66,9 @@ set showcmd		" Show command in bottom bar
 set wildmenu            " Enable auto completion menu after pressing TAB.
 set lazyredraw		" Redraw only when we need to
 set noerrorbells	" Makes the vim silent
+set scrolloff=5		" The cursor won't be able to reach the top nor the
+			"bottom of the screen
+
 
 "set tabstop=4		" Number of visual spaces per TAB
 "set softtabstop=4	" Number of spaces in tab when editting (erasing)

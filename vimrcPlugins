@@ -102,10 +102,14 @@ nmap        S   <Plug>(vsnip-cut-text)
 xmap        S   <Plug>(vsnip-cut-text)
 
 " Plugin to write good latex pdf files
+"
+" Comments: If the plugin can't find main file, press :set b:vimtex_main <localLeader>lX and then 
 Plugin 'lervag/vimtex'
 " Viewer options: One may configure the viewer either by specifying a built-in
 " viewer method:
-let g:vimtex_view_method = 'zathura'
+let g:vimtex_view_enabled = 0
+"let g:vimtex_view_method = 'none'
+" Verificar viewer configuration na linha 5984.
 
 " VimTeX uses latexmk as the default compiler backend. If you use it, which is
 " strongly recommended, you probably don't need to configure anything. If you
@@ -116,21 +120,52 @@ let g:vimtex_compiler_method = 'latexmk'
 
 " Para fazer com que o inkscape consiga ser chamado e criar as imagens a
 " partir do svg.
+" " Opções default provenientes do manual também estão presentes.
 let g:vimtex_compiler_latexmk = {
-    \ 'options' : [
-    \   '-pdf',
-    \   '-shell-escape',
-    \   '-verbose',
-    \   '-file-line-error',
-    \   '-synctex=1',
-    \   '-interaction=nonstopmode',
-    \ ],
-    \}
+	\ 'aux_dir' : './aux/',
+	\ 'out_dir' : './out/',
+	\ 'callback' : 1,
+	\ 'continuous' : 0,
+	\ 'executable' : 'latexmk',
+	\ 'hooks' : [],
+	\ 'options' : [
+	\   '-shell-escape',
+	\   '-verbose',
+	\   '-file-line-error',
+	\   '-synctex=1',
+	\   '-interaction=nonstopmode',
+	\ ],
+	\}
+
+" Opções default provindas da documentação.
+let g:vimtex_compiler_latexmk_engines = {
+	\ '_'                : '-pdf',
+	\ 'pdfdvi'           : '-pdfdvi',
+	\ 'pdfps'            : '-pdfps',
+	\ 'pdflatex'         : '-pdf',
+	\ 'luatex'           : '-lualatex',
+	\ 'lualatex'         : '-lualatex',
+	\ 'xelatex'          : '-xelatex',
+	\ 'context (pdftex)' : '-pdf -pdflatex=texexec',
+	\ 'context (luatex)' : '-pdf -pdflatex=context',
+	\ 'context (xetex)'  : '-pdf -pdflatex=''texexec --xtx''',
+	\}
+
+
+" Verificar os atalhos no modo de inserção definidos na linha 188 do: 
+" ~/.vim/bundle/vimtex/autoload/vimtex/options.vim`
+let vimtex_imaps_leader = "´"
 
 " Most VimTeX mappings rely on localleader and this can be changed with the
 " following line. The default is usually fine and is the symbol "\".
 let maplocalleader = ","
+" De vez em quando o quickfix do latex me enche. 
+"let g:vimtex_quickfix_enabled = 0
+" A janela do wuickfix não abre automaticamente nunca
+let g:vimtex_quickfix_mode = 0
+
 let g:tex_conceal = ""
+let g:vimtex_syntax_conceal_disable=1
 
 Plugin 'mateusbraga/vim-spell-pt-br'
 set spelllang=pt_br

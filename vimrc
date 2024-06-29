@@ -180,6 +180,18 @@ nnoremap <leader>, :tabmove -1<CR>
 nnoremap <leader>f :tabfirst<CR>
 " \l stands for last tab
 nnoremap <leader>l :tablast<CR>
+"
+" QUICKFIX BINDING
+function! ToggleQuickFix()
+    if empty(filter(getwininfo(), 'v:val.quickfix'))
+        copen
+    else
+        cclose
+    endif
+endfunction
+
+nnoremap <leader>q :call ToggleQuickFix()<CR>
+
 
 " ------------------------------------------------------------------------------------
 

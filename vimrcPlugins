@@ -122,10 +122,8 @@ let g:vimtex_compiler_method = 'latexmk'
 " partir do svg.
 " " Opções default provenientes do manual também estão presentes.
 let g:vimtex_compiler_latexmk = {
-	\ 'aux_dir' : './aux/',
-	\ 'out_dir' : './out/',
 	\ 'callback' : 1,
-	\ 'continuous' : 0,
+	\ 'continuous' : 1,
 	\ 'executable' : 'latexmk',
 	\ 'hooks' : [],
 	\ 'options' : [
@@ -138,18 +136,18 @@ let g:vimtex_compiler_latexmk = {
 	\}
 
 " Opções default provindas da documentação.
-let g:vimtex_compiler_latexmk_engines = {
-	\ '_'                : '-pdf',
-	\ 'pdfdvi'           : '-pdfdvi',
-	\ 'pdfps'            : '-pdfps',
-	\ 'pdflatex'         : '-pdf',
-	\ 'luatex'           : '-lualatex',
-	\ 'lualatex'         : '-lualatex',
-	\ 'xelatex'          : '-xelatex',
-	\ 'context (pdftex)' : '-pdf -pdflatex=texexec',
-	\ 'context (luatex)' : '-pdf -pdflatex=context',
-	\ 'context (xetex)'  : '-pdf -pdflatex=''texexec --xtx''',
-	\}
+" let g:vimtex_compiler_latexmk_engines = {
+" 	\ '_'                : '-pdf',
+" 	\ 'pdfdvi'           : '-pdfdvi',
+" 	\ 'pdfps'            : '-pdfps',
+" 	\ 'pdflatex'         : '-pdf',
+" 	\ 'luatex'           : '-lualatex',
+" 	\ 'lualatex'         : '-lualatex',
+" 	\ 'xelatex'          : '-xelatex',
+" 	\ 'context (pdftex)' : '-pdf -pdflatex=texexec',
+" 	\ 'context (luatex)' : '-pdf -pdflatex=context',
+" 	\ 'context (xetex)'  : '-pdf -pdflatex=''texexec --xtx''',
+" 	\}
 
 
 " Verificar os atalhos no modo de inserção definidos na linha 188 do: 
@@ -162,7 +160,8 @@ let maplocalleader = ","
 " De vez em quando o quickfix do latex me enche. 
 "let g:vimtex_quickfix_enabled = 0
 " A janela do wuickfix não abre automaticamente nunca
-let g:vimtex_quickfix_mode = 0
+"let g:vimtex_quickfix_mode = 0
+let g:vimtex_quickfix_mode = 1
 
 let g:tex_conceal = ""
 let g:vimtex_syntax_conceal_disable=1

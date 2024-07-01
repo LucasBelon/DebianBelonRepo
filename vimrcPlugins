@@ -108,7 +108,7 @@ Plugin 'lervag/vimtex'
 " Viewer options: One may configure the viewer either by specifying a built-in
 " viewer method:
 let g:vimtex_view_enabled = 0
-"let g:vimtex_view_method = 'none'
+"let g:vimtex_view_method = 'zathura'
 " Verificar viewer configuration na linha 5984.
 
 " VimTeX uses latexmk as the default compiler backend. If you use it, which is

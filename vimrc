@@ -88,6 +88,7 @@ set path+=** " Adds all subdirectories
 set omnifunc=syntaxcomplete#Complete " Enable OmniComplete to all files
 
 set spelllang=pt_br,en
+set spellfile=~/.vim/spell/pt_utf-8.add,~/.vim/en_utf8.add
 
 "set cursorline		" Highlight current line
 "set cursorcolumn	" Highlight current column

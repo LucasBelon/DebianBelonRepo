@@ -122,6 +122,7 @@ let g:vimtex_compiler_method = 'latexmk'
 " partir do svg.
 " " Opções default provenientes do manual também estão presentes.
 let g:vimtex_compiler_latexmk = {
+	\ 'aux_dir' : './aux/',
 	\ 'callback' : 1,
 	\ 'continuous' : 1,
 	\ 'executable' : 'latexmk',
@@ -134,6 +135,8 @@ let g:vimtex_compiler_latexmk = {
 	\   '-interaction=nonstopmode',
 	\ ],
 	\}
+" Opção retirada por hora.
+"	\ 'out_dir' : './out/',
 
 " Opções default provindas da documentação.
 " let g:vimtex_compiler_latexmk_engines = {

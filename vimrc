@@ -69,7 +69,6 @@ set noerrorbells	" Makes the vim silent
 set scrolloff=5		" The cursor won't be able to reach the top nor the
 			"bottom of the screen
 
-
 "set tabstop=4		" Number of visual spaces per TAB
 "set softtabstop=4	" Number of spaces in tab when editting (erasing)
 "set shiftwidth=4	" Number of spaces when TAB
@@ -131,6 +130,9 @@ nnoremap <leader>e :Lexplore<CR>
 nnoremap <space><space> :nohlsearch<CR>	
 " Turns '<\ + space>' a command to turn off the 
 " syntax highlighting from previous search
+
+nnoremap <space>n :cnext<CR>
+nnoremap <space>p :cprevious<CR>
 
 " BufferNavigation
 nnoremap <leader>n :bNext<CR>

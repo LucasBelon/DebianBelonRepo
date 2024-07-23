@@ -123,6 +123,10 @@ nnoremap <leader>mks :call MakeSession()<cr>
 "nnoremap <space> za 
 " Space open/closes folds
 
+
+" 
+nnoremap <leader>o :only<CR>
+
 nnoremap <leader>e :Lexplore<CR>
 " Abre ou fecha o navegador de arquivos com \e
 

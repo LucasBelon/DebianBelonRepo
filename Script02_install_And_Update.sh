@@ -261,10 +261,10 @@ mkdir -p ~/.vim/undodir ; # undodir is there to prevent a bunch of swp files
 mkdir -p ~/.vim/bundle ; # The bundle directory is where our plugins should be
 mkdir -p ~/.vim/after/ftplugin ; # Our typefiles configs will be here
 
-cp ~/DebianBelonRepo/vimrc  ~/.vim/ ; # Copy vimrc to ~/.vim/
+cp ./vimrc  ~/.vim/ ; # Copy vimrc to ~/.vim/
 
 # Copiando o arquivo de configuração do tmux
-mv tmux.conf ~/.tmux.conf ;
+cp ./tmux.conf ~/.tmux.conf ;
 
 # Correção de configurações de data e hora para dual boot (linux mint).
 timedatectl set-local-rtc 1;

@@ -94,6 +94,8 @@ git config --global alias.lg "log --oneline --graph --decorate"
 git config --global alias.ac "commit -am"
 # The line above will make an alias "git commit -am" to "git ac"
 git config --global core.editor "vim"
+git config --global diff.tool vimdiff
+git config --global difftool.prompt false
 <<TeoricExplanation-CommitStages
 There is something called two stages commit. 
 When you work locally, your files exist in one of four states. They are either untracked, modified, staged, or
